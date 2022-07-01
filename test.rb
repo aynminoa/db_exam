@@ -10,7 +10,7 @@ server = WEBrick::HTTPServer.new({
 }
 
 # server.mount('/test', WEBrick::HTTPServlet::ERBHandler, 'test.html.erb')
-server.mount('/test', WEBrick::HTTPServlet::ERBHandler, 'db_exam.html.erb')
+server.mount('/', WEBrick::HTTPServlet::ERBHandler, 'db_exam.html.erb')
 
 # server.mount('/indicate.cgi', WEBrick::HTTPServlet::CGIHandler, 'indicate.rb')
 
