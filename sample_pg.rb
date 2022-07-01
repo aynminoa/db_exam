@@ -17,13 +17,12 @@ begin
       # 各行を取り出し、putsでターミナル上に出力する
       puts "売った相手：#{record["give_for"]}"
   end
+
+  begin
   result2 = connection.exec("select * from crops where not(give_for='自家消費');")
   result1.each do |record|
       # 各行を取り出し、putsでターミナル上に出力する
       puts "ゴーヤの長さ：#{record["length"]} ゴーヤの大きさ：#{record["weight"]} 売った相手：#{record["give_for"]} 日付：#{record["date"]}"
-
-  begin
-  
   end
 
 ensure
